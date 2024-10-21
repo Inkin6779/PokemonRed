@@ -1,27 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Play Gameboy Games</title>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f0f0f0;
-            font-family: Arial, sans-serif;
-        }
-        iframe {
-            border: 2px solid #333;
-            width: 480px;
-            height: 320px;
-        }
-    </style>
-</head>
-<body>
-    <h1>Play Gameboy Games</h1>
-    <iframe src="insert.gb" title="Gameboy Game"></iframe>
-</body>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link rel="shortcut icon" type="image/jpeg" href="favicon.jpg"/>
+		<title>Gameboy Game</title>
+		
+		<!-- Use a Gameboy emulator library -->
+		<script type="text/javascript" src="game.js"></script>
+		<script>window.onload = function(){gb_load_url("gb-canvas", "insert.gb");}</script>
+	</head>
+	<body>
+		<div style="margin: auto; width: 49%;">
+			<canvas id="gb-canvas" width="256" height="240" style="width: 100%;"></canvas>
+		</div>
+	</body>
 </html>
